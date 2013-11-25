@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/RateWebService/RateWebService?wsdl" uri="src/conf/xml-resources/web-service-references/RateWebService/wsdl/localhost_8080/RateWebService/RateWebService.wsdl"/>
+    <system systemId="http://localhost:8080/RateWebService/RateWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/RateWebService/wsdl/localhost_8080/RateWebService/RateWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/RatingWebService/RatingWebService?wsdl" uri="src/conf/xml-resources/web-service-references/RatingWebService/wsdl/localhost_8080/RatingWebService/RatingWebService.wsdl"/>
+    <system systemId="http://localhost:8080/RatingWebService/RatingWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/RatingWebService/wsdl/localhost_8080/RatingWebService/RatingWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/LotWebService/LotWebService?wsdl" uri="src/conf/xml-resources/web-service-references/LotWebService/wsdl/localhost_8080/LotWebService/LotWebService.wsdl"/>
+    <system systemId="http://localhost:8080/LotWebService/LotWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/LotWebService/wsdl/localhost_8080/LotWebService/LotWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/CategoryWebService/CategoryWebService?wsdl" uri="src/conf/xml-resources/web-service-references/CategoryWebService/wsdl/localhost_8080/CategoryWebService/CategoryWebService.wsdl"/>
+    <system systemId="http://localhost:8080/CategoryWebService/CategoryWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/CategoryWebService/wsdl/localhost_8080/CategoryWebService/CategoryWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/UserWebService/UserWebService?wsdl" uri="src/conf/xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/UserWebService/UserWebService.wsdl"/>
+    <system systemId="http://localhost:8080/UserWebService/UserWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/UserWebService/UserWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ArchiveWebService/ArchiveWebService?wsdl" uri="src/conf/xml-resources/web-service-references/ArchiveWebService/wsdl/localhost_8080/ArchiveWebService/ArchiveWebService.wsdl"/>
+    <system systemId="http://localhost:8080/ArchiveWebService/ArchiveWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/ArchiveWebService/wsdl/localhost_8080/ArchiveWebService/ArchiveWebService.xsd_1.xsd"/>
+</catalog>

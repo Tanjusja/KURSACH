@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://users.ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://users.ws/">
+
+<xs:element name="count" type="tns:count"/>
+
+<xs:element name="countResponse" type="tns:countResponse"/>
+
+<xs:element name="create" type="tns:create"/>
+
+<xs:element name="edit" type="tns:edit"/>
+
+<xs:element name="find" type="tns:find"/>
+
+<xs:element name="findAll" type="tns:findAll"/>
+
+<xs:element name="findAllResponse" type="tns:findAllResponse"/>
+
+<xs:element name="findRange" type="tns:findRange"/>
+
+<xs:element name="findRangeResponse" type="tns:findRangeResponse"/>
+
+<xs:element name="findResponse" type="tns:findResponse"/>
+
+<xs:element name="remove" type="tns:remove"/>
+
+<xs:complexType name="create">
+<xs:sequence>
+<xs:element name="users" type="tns:users" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="users">
+<xs:sequence>
+<xs:element name="fio" type="xs:string" minOccurs="0"/>
+<xs:element name="IDUser" type="xs:int" minOccurs="0"/>
+<xs:element name="ISAdmin" type="xs:boolean"/>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="rating" type="tns:rating" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rating">
+<xs:sequence>
+<xs:element name="amountLikes" type="xs:int"/>
+<xs:element name="amountLots" type="xs:int"/>
+<xs:element name="amountOwnLikes" type="xs:int"/>
+<xs:element name="amountSales" type="xs:int"/>
+<xs:element name="IDUser" type="xs:int" minOccurs="0"/>
+<xs:element name="mark" type="xs:int"/>
+<xs:element name="users" type="tns:users" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRange">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRangeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:users" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="find">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:users" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="edit">
+<xs:sequence>
+<xs:element name="users" type="tns:users" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="remove">
+<xs:sequence>
+<xs:element name="users" type="tns:users" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="count">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:users" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

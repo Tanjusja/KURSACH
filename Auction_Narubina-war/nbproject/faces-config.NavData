@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="EditLot-jsf.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="DeleteUsers-jsf.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="AddCategory-jsf.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="Registration-jsf.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="allLots-jsf.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="lineChart.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="userRate-jsf.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="AddLot-jsf.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="StartPage-jsf.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="viewUserRate-jsf.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="viewLot-jsf.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="Lots-jsf.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="category-jsf.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="index_1.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="saleLot-jsf.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="UserLot-jsf.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="viewUserLot-jsf.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="DeleteCategory-jsf.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="allLots-jsf_1.xhtml" x="150" y="750" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

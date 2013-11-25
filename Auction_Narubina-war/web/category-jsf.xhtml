@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      lang="en"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Slick Web Layout</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/text.css" />
+        <link rel="stylesheet" href="css/960.css" />
+        <link rel="stylesheet" href="css/css3.css" />
+
+        <style>
+
+            #hfwrap {width:100%; background:transparent url(img/header-bg.jpg) no-repeat; height:400px; position:relative;}
+            #lnwrap {width:100%; background:transparent url(img/nav-bg.png) repeat-x;}
+            #hfwrap2 {
+                height:400px;
+                width:100%;
+                position:absolute; 
+                background:transparent url(img/large-phone1.png) no-repeat 80% 0;
+            }
+            #blog {background:transparent url(img/vertsep.png) no-repeat 0 0;}
+            #footerwrap {
+                width:100%; 
+                background:transparent url(img/footer-bg.jpg) no-repeat; 
+                height:200px;
+                border-top:1px solid #fff;
+            }
+             #logo {
+                background:transparent url(img/logo-site-hl.png) no-repeat;
+                text-indent:-7777em;
+            }
+            #t{
+                text-align:center ;
+                
+                width:380px;
+            }
+        </style>
+
+    </h:head>
+    <h:body>
+        <div id="hfwrap">
+            <div id="hfwrap2">
+                <div id="hfwrap3">
+                    <div id="lnwrap">    
+                        <header id="main-header" class="container_12 clearfix">
+                            <h1 id="logo" class="grid_2 suffix_4"><a href="#">Design by Narubina T.I.</a></h1>
+                            <nav id="main-nav" class="grid_6">
+                                <h1>Main page navigation</h1>
+                                <h:form> <ul>
+                                        <li class="current"><h:commandLink action="StartPage-jsf">Главная</h:commandLink> </li>
+                                        <li><h:commandLink action="category-jsf" >Пользователь
+                                                <f:param name="tek" value="#{lot.login}"	></f:param></h:commandLink></li>
+                                        <li><h:commandLink action="#{rate.userRate()}" >Мои ставки
+                                                <f:param name="tek" value="#{lot.login}"	></f:param></h:commandLink></li>
+                                        <li><a href="#">Инфо</a></li>
+
+                                    </ul></h:form>
+                            </nav>
+                        </header>
+                    </div><!--lnwrap-->
+
+                    <section id="featured" class="container_12 clearfix">
+                        <div id="descrp" class="grid_6 suffix_6">
+                            <h1> Аукцион </h1>
+                            <br><br></br></br>
+                            <h:form><p class="button"><h:commandLink style="WIDTH: 100px" value="Выход" action="#{user.sessionOut()}"> </h:commandLink></p></h:form>
+
+                           
+                            <span></span>             
+                        </div><!--#descrp-->   
+                    </section>
+                </div><!--#hfwrap3-->
+            </div><!--hfwrap2-->
+        </div><!--hfwrap-->
+<h:form>
+        <section id="more-products" class="container_12 clearfix">
+            <h1>Добро пожаловать на страницу администратора!</h1>
+
+            <section id="more-blurb" class="container_12 clearfix">
+                <div id="blurb" class="grid_7">
+                    <h1>Категории</h1>
+                    <div id="t">
+                    
+                        <p:dataTable  id="dataTable" var="listCat" value="#{category.listCategory}" emptyMessage="Ничего не найдено">  
+                            <p:column id="modelHeader" sortBy="#{listCat.nameCategory}">  
+                                <f:facet name="header">  
+                                    <h:outputText value="Наименование категории" />  
+                                </f:facet>  
+                              <h:commandLink value="#{listCat.nameCategory}" action="Lots-jsf" >  </h:commandLink>
+                              <f:param name="tek" value="#{lot.idCategory.nameCategory}"	></f:param>
+                            </p:column> 
+                        </p:dataTable>
+                    
+                    </div>
+                    <div id="blurb-widget">
+                        <br></br>
+                        <img src="img/phone-widget.jpg" width="380" height="84" alt="phone widget 1" /></div>
+                </div><!--#blurb-->
+
+                <div id="blog" class="grid_5">
+                    <div id="blogwrap">
+                        <h1>Возможности</h1>
+                        
+                        <article class="clearfix">
+                            <h:commandLink  action="AddCategory-jsf"><p:graphicImage name="thumb01.png" library="img" styleClass="thumb"></p:graphicImage></h:commandLink>
+                            <div class="entry">
+                                <h1><h:commandLink  action="AddCategory-jsf"><h:outputText value="Добавить категорию"/></h:commandLink></h1>
+                                <br><br></br></br>
+                            </div><!--#entry-->
+                        </article>
+                        <article class="clearfix">
+                            <h:commandLink  action="DeleteCategory-jsf"><p:graphicImage name="thumb02.png" library="img" styleClass="thumb"></p:graphicImage></h:commandLink>
+                            <div class="entry">
+                                <h1><h:commandLink  action="DeleteCategory-jsf">Удалить категорию</h:commandLink></h1>
+                                <br><br></br></br>
+                            </div><!--#entry-->
+                        </article> 
+                        <article class="clearfix">
+                           <h:commandLink  action ="DeleteUsers-jsf"><p:graphicImage name="images1.jpeg" library="img" width="60" height="60" alt="blog entry thumbnail" styleClass="thumb"></p:graphicImage></h:commandLink>
+                            <div class="entry">
+                                <h1><h:commandLink  action ="DeleteUsers-jsf">Удалить пользователя</h:commandLink></h1>
+                                <br><br></br></br>
+                            </div><!--#entry-->
+                        </article> 
+                      
+                    </div><!--#blogwrap-->        
+                </div><!--#blog-->
+                  
+            </section><!--#more-blurb-->
+
+        </section><!--#more-products-->
+</h:form>
+        <!-- Пусть не оставят Вас равнодушными наши услуги-->
+        <div id="footerwrap">
+            
+            <div id="fsubwrap1">    
+                <footer id="main-footer" class="container_12 clearfix">
+                    <section id="fsub1" class="grid_3">
+                        <h1>Почта</h1>
+                        <input type="email" style="WIDTH: 120px" placeholder="me@myemail.com"/>
+                        <p class="button"><a href="#">вход</a></p>         
+                    </section>
+
+                    <section id="fsub2" class="grid_3">
+                        <h1>адрес</h1>
+                        <p>220013 Я.Коласа, 28, г. Минск</p>        
+                    </section>
+
+                    <section id="fsub3" class="grid_3">
+                        <h1>контакты</h1>
+                        <p>Телефон: 8(029) 342-55-30</p>
+                        <p>tanyxxxl91@mail.ru</p>        
+                    </section>
+
+                    <section id="fsub4" class="grid_3">
+                        <h1></h1>
+                        <p class="icon"><a href="http://twitter.com/" target="_blank"><img src="img/assets/twitter_32.png" width="32" height="32" alt="twitter icon" /></a></p>
+                        <p class="icon"><a href="http://www.facebook.com/" target="_blank"><img src="img/assets/facebook_32.png" width="32" height="32" alt="facebook icon" /></a></p>
+                        <p class="icon"><a href="http://www.google.by/" target="_blank"><img src="img/assets/images13.jpeg" width="32" height="32" alt="flickr icon" /></a></p>
+                        <p class="icon"><a href="http://rss.com/" target="_blank"><img src="img/assets/rss_32.png" width="32" height="32" alt="rss icon" /></a></p>        
+                    </section>
+                </footer>                
+            </div><!--#fsubwrap1-->
+
+            <div id="fsubwrap2">
+                <footer id="copyright-info" class="container_12">
+                    <small>Auction Design by Narubina T.I., BSUIR, 2012</small>
+                </footer>
+            </div><!--#fsubwrap2-->     
+        </div><!--#footerwrap-->
+
+    </h:body>
+</html>
+

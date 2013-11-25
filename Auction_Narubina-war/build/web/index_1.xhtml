@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+<h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+                    <h:form>
+                    <h:commandLink action="/department/List" value="Show All Department Items"/>
+                </h:form>
+                <h:form>
+                    <h:commandLink action="/product/List" value="Show All Product Items"/>
+                </h:form>
+                <h:form>
+                    <h:commandLink action="/worker/List" value="Show All Worker Items"/>
+                </h:form>
+          <p:lineChart id="linear" value="#{chartBean.linearModel}" legendPosition="e"
+     title="Linear Chart" minY="1" maxY="50" style="height:500px; width:700px" />
+                
+            <p:lineChart id="linear" value="#{entity.ChartBean.linearModel}" legendPosition="e"
+     title="Linear Chart" minY="0" maxY="10" style="height:300px"/>  
+</h:body>
+
+
+
+</html>
+

@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      lang="en"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Slick Web Layout</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/text.css" />
+        <link rel="stylesheet" href="css/960.css" />
+        <link rel="stylesheet" href="css/css3.css" />
+
+        <style>
+
+            #hfwrap {width:100%; background:transparent url(img/header-bg.jpg) no-repeat; height:400px; position:relative;}
+            #lnwrap {width:100%; background:transparent url(img/nav-bg.png) repeat-x;}
+            #hfwrap2 {
+                height:400px;
+                width:100%;
+                position:absolute; 
+                background:transparent url(img/large-phone1.png) no-repeat 80% 0;
+            }
+            #font {
+                font-style:italic(em);
+                color:#ffffff;
+            }
+            #footerwrap {
+                width:100%; 
+                background:transparent url(img/footer-bg.jpg) no-repeat; 
+                height:200px;
+                border-top:1px solid #fff;
+            }
+            #footerwrap2 {
+                width:100%; 
+                background:transparent url(img/images17.jpeg) no-repeat; height:450px;
+
+                border-top:1px solid #fff;
+            }
+            #logo {
+                background:transparent url(img/logo-site-hl.png) no-repeat;
+                text-indent:-7777em;
+            }
+            #image{
+                background:transparent url(img/3ec5d5e38dc7.jpg) no-repeat; height:470px;
+                background-position: right;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div id="hfwrap">
+            <div id="hfwrap2">
+                <div id="hfwrap3">
+                    <div id="lnwrap">    
+                        <header id="main-header" class="container_12 clearfix">
+                            <h1 id="logo" class="grid_2 suffix_4"><a href="#">Design by Narubina T.I.</a></h1>
+                            <nav id="main-nav" class="grid_6">
+                                <h1>Main page navigation</h1>
+                                <h:form>
+                                    <ul>
+                                       <li class="current"><h:commandLink action="StartPage-jsf">Главная</h:commandLink> </li>
+                                       <li><h:commandLink action="#{lot.userPage()}" >Пользователь
+                                                <f:param name="tek" value="#{lot.login}"	></f:param></h:commandLink></li>
+                                        <li><h:commandLink action="#{rate.userRate()}" >Мои ставки
+                                                <f:param name="tek" value="#{lot.login}"	></f:param></h:commandLink></li>
+                                        <li><a href="#">Инфо</a></li>
+
+                                    </ul>
+                                </h:form>
+                            </nav>
+                        </header>
+                    </div><!--lnwrap-->
+
+                    <section id="featured" class="container_12 clearfix">
+                        <div id="descrp" class="grid_6 suffix_6">
+                            <h1> Аукцион </h1>
+                            <br><br></br></br>
+                                       
+                           <!-- <table  >
+                                <tr>
+                                    <td>
+                                        <h2 style="color:#ffffff">Логин:</h2>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="WIDTH: 170px" name="userlogin"/>
+                                    </td>
+                                </tr>
+                                <tr>  <td></td>                              </tr>
+                                <tr>
+                                    <td>
+                                        <h2 style="color:#ffffff">Пароль:&nbsp;</h2>
+                                    </td>
+                                    <td>
+                                        <input type="password" style="WIDTH: 170px" name="textpass"/>
+                                    </td>
+                                </tr>
+
+                            </table> 
+                            <p class="button"><a href="#" style="WIDTH: 100px">    Вход   </a></p>
+                            <p class="button"><a href="#">Регистрация</a></p>-->
+                            <h1> Здравствуйте, #{lot.login} ! </h1>
+                            <span></span>             
+                        </div><!--#descrp-->   
+                    </section>
+                </div><!--#hfwrap3-->
+            </div><!--hfwrap2-->
+        </div><!--hfwrap-->
+
+         <section id="more-products" class="container_12 clearfix">
+            <h1>Редактирование лота</h1>
+
+            <section id="more-blurb" class="container_12 clearfix">
+            
+                <div id="font"> <div id="blurb" class="grid_7">
+                        <h:form >
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h2><h:outputLabel  value="Название:" for="#{lot.nameLot}"/></h2>
+                                    </td>
+                                    <td>
+                                        <p:inputText style="WIDTH: 250px" value="#{lot.nameLot}"/>
+                                    </td>
+                                </tr>
+                                <tr><td><br></br></td></tr>
+                                <tr>
+                                    <td>
+                                        <h2><h:outputLabel  value="Описание:" for="#{lot.description}"/></h2>
+                                    </td>
+                                    <td>
+                                        <p:inputTextarea rows="4" style="WIDTH: 250px" value="#{lot.description}"/>
+
+                                    </td>
+                                </tr>
+                                <tr><td><br></br></td></tr>
+                                <tr>
+                                    <td>
+                                        <h2><h:outputLabel  value="Стартовая цена:" for="#{lot.startCost}"/></h2>
+                                    </td>
+                                    <td>
+                                        <p:inputText style="WIDTH: 250px" value="#{lot.startCost}"/>
+                                    </td>
+                                </tr>
+                                <tr><td><br></br></td></tr>
+                                <tr>
+                                    <td>
+                                        <h2><h:outputLabel  value="Минимальная ставка:" for="#{lot.minRate}"/></h2>
+                                    </td>
+                                    <td>
+                                        <p:inputText style="WIDTH: 250px" value="#{lot.minRate}"/>
+                                    </td>
+                                </tr>
+                                <tr><td><br></br></td></tr>
+                                <tr>
+                                    <td>
+                                        <h2><h:outputLabel  value="Количество дней:" for="#{lot.tradingHours}"/></h2>
+                                    </td>
+                                    <td>
+                                        <p:inputText style="WIDTH: 250px" value="#{lot.tradingHours}"/>
+                                    </td>
+                                </tr>
+                                <tr><td><br></br></td></tr>
+                                <tr>
+                                    <td>
+                                        <h2><h:outputLabel  value="Категория:" for="#{lot.nameCategory}"/></h2>
+                                    </td>
+                                    <td>
+                                        <!--<p:selectOneMenu  value="{lot.nameCategory}" style="height: 30px; width: 250px; font-size: 18px">  
+                                                <f:selectItem itemValue="" />  
+                                                <f:selectItems value="{lot.list}"/>
+                                            </p:selectOneMenu>-->
+                                         <h:selectOneMenu  value="#{lot.nameCategory}" style="width: 250px;" required="true">  
+                                                
+                                                <f:selectItems value="#{lot.categories}"/>
+                                            </h:selectOneMenu>  
+                                    </td>
+                                </tr>
+                                 <tr><td><br></br></td></tr>
+                                
+                                <tr>
+                                    <td>
+
+                                        <p class="button"><h:commandLink action="#{lot.editAddLot()}" style="WIDTH: 170px" value="Добавить">
+                                                <f:param name="tek" value="#{lot.idLot}"></f:param></h:commandLink></p>
+                                        <!--        #font {
+                                         font-style:italic(em);
+                                         color:#ffffff;
+                                     }-->&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                         <p class="links"><a href="?method=start" style="margin-left: 10px">Загрузить фотографию</a>
+
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<h:commandLink action="Lots-jsf" style="font-size:15px">На главную</h:commandLink></p>
+                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </h:form>
+                    </div >
+                </div>
+                
+                <div id="footerwrap2">
+                    <div id="blog" class="grid_5">
+                        <div id="blogwrap">
+                            <div id="image">
+
+</div><!--#blogwrap-->        
+                        </div><!--#blog--></div></div>
+
+                        </section><!--#more-blurb-->
+
+                        </section><!--#more-products-->
+                        <br><br><br><br><br></br></br></br></br></br>
+                        <!-- Пусть не оставят Вас равнодушными наши услуги-->
+
+                        <!-- Пусть не оставят Вас равнодушными наши услуги-->
+                        <div id="footerwrap">
+                            <div id="fsubwrap1">    
+                                <footer id="main-footer" class="container_12 clearfix">
+                                    <section id="fsub1" class="grid_3">
+                                        <h1>Почта</h1>
+                                        <input type="email" style="WIDTH: 120px" placeholder="me@myemail.com"/>
+                                        <p class="button"><a href="#">вход</a></p>         
+                                    </section>
+
+                                    <section id="fsub2" class="grid_3">
+                                        <h1>адрес</h1>
+                                        <p>220013 Я.Коласа, 28, г. Минск</p>        
+                                    </section>
+
+                                    <section id="fsub3" class="grid_3">
+                                        <h1>контакты</h1>
+                                        <p>Телефон: 8(029) 342-55-30</p>
+                                        <p>tanyxxxl91@mail.ru</p>        
+                                    </section>
+
+                                    <section id="fsub4" class="grid_3">
+                                        <h1></h1>
+                                        <p class="icon"><a href="http://twitter.com/" target="_blank"><img src="img/assets/twitter_32.png" width="32" height="32" alt="twitter icon" /></a></p>
+                                        <p class="icon"><a href="http://www.facebook.com/" target="_blank"><img src="img/assets/facebook_32.png" width="32" height="32" alt="facebook icon" /></a></p>
+                                        <p class="icon"><a href="http://www.google.by/" target="_blank"><img src="img/assets/images13.jpeg" width="32" height="32" alt="flickr icon" /></a></p>
+                                        <p class="icon"><a href="http://rss.com/" target="_blank"><img src="img/assets/rss_32.png" width="32" height="32" alt="rss icon" /></a></p>        
+                                    </section>
+                                </footer>                
+                            </div><!--#fsubwrap1-->
+
+                            <div id="fsubwrap2">
+                                <footer id="copyright-info" class="container_12">
+                                    <small>Auction Design by Narubina T.I., BSUIR, 2012</small>
+                                </footer>
+                            </div><!--#fsubwrap2-->     
+                        </div><!--#footerwrap-->
+
+    </h:body>
+</html>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        -->
+<project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-UserWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UserWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UserWebService" destdir="${build.generated.dir}/jax-wsCache/UserWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/UserWebService/UserWebService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/UserWebService/UserWebService?wsdl" xnocompile="true" xendorsed="true" package="client.users">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UserWebService/wsdl/localhost_8080/UserWebService/UserWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UserWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UserWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UserWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/client/users"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UserWebService"/>
+    </target>
+    <target name="wsimport-client-CategoryWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CategoryWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CategoryWebService" destdir="${build.generated.dir}/jax-wsCache/CategoryWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CategoryWebService/wsdl/localhost_8080/CategoryWebService/CategoryWebService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/CategoryWebService/CategoryWebService?wsdl" xnocompile="true" xendorsed="true" package="client.category">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CategoryWebService/wsdl/localhost_8080/CategoryWebService/CategoryWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CategoryWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CategoryWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CategoryWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/client/category"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CategoryWebService"/>
+    </target>
+    <target name="wsimport-client-LotWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/LotWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LotWebService" destdir="${build.generated.dir}/jax-wsCache/LotWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/LotWebService/wsdl/localhost_8080/LotWebService/LotWebService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/LotWebService/LotWebService?wsdl" xnocompile="true" xendorsed="true" package="client.lots">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/LotWebService/wsdl/localhost_8080/LotWebService/LotWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/LotWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/LotWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-LotWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/client/lots"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/LotWebService"/>
+    </target>
+    <target name="wsimport-client-RateWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/RateWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/RateWebService" destdir="${build.generated.dir}/jax-wsCache/RateWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/RateWebService/wsdl/localhost_8080/RateWebService/RateWebService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/RateWebService/RateWebService?wsdl" xnocompile="true" xendorsed="true" package="client.rate">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/RateWebService/wsdl/localhost_8080/RateWebService/RateWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/RateWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/RateWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-RateWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/client/rate"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/RateWebService"/>
+    </target>
+    <target name="wsimport-client-RatingWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/RatingWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/RatingWebService" destdir="${build.generated.dir}/jax-wsCache/RatingWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/RatingWebService/wsdl/localhost_8080/RatingWebService/RatingWebService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/RatingWebService/RatingWebService?wsdl" xnocompile="true" xendorsed="true" package="client.rating">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/RatingWebService/wsdl/localhost_8080/RatingWebService/RatingWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/RatingWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/RatingWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-RatingWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/client/rating"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/RatingWebService"/>
+    </target>
+    <target name="wsimport-client-ArchiveWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ArchiveWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ArchiveWebService" destdir="${build.generated.dir}/jax-wsCache/ArchiveWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ArchiveWebService/wsdl/localhost_8080/ArchiveWebService/ArchiveWebService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/ArchiveWebService/ArchiveWebService?wsdl" xnocompile="true" xendorsed="true" package="client.archive">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ArchiveWebService/wsdl/localhost_8080/ArchiveWebService/ArchiveWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ArchiveWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ArchiveWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ArchiveWebService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/client/archive"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ArchiveWebService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-UserWebService, wsimport-client-CategoryWebService, wsimport-client-LotWebService, wsimport-client-RateWebService, wsimport-client-RatingWebService, wsimport-client-ArchiveWebService"/>
+</project>

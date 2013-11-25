@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="UserWebService">
+      <implementation-class>ws.users.UserWebService</implementation-class>
+    </service>
+    <service name="CategoryWebService">
+      <implementation-class>ws.category.CategoryWebService</implementation-class>
+    </service>
+    <service name="LotWebService">
+      <implementation-class>ws.lots.LotWebService</implementation-class>
+    </service>
+    <service name="RateWebService">
+      <implementation-class>ws.rate.RateWebService</implementation-class>
+    </service>
+    <service name="RatingWebService">
+      <implementation-class>ws.rating.RatingWebService</implementation-class>
+    </service>
+    <service name="ArchiveWebService">
+      <implementation-class>ws.archive.ArchiveWebService</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>
